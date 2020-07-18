@@ -4,12 +4,17 @@ const createEmployeeRecord = (array) => {
     firstName: array[0],
     familyName: array[1],
     title: array[2],
+<<<<<<< HEAD
     payPerHour: array[3],
+=======
+    peyPerHour: array[3],
+>>>>>>> 43b5e5ec47d208aa002d963b18edb6ba9a0412f6
     timeInEvents: [],
     timeOutEvents: [],
   };
 };
 const createEmployeeRecords = (array) => {
+<<<<<<< HEAD
   return array.map((record) => {
     return createEmployeeRecord(record);
   });
@@ -66,4 +71,10 @@ const calculatePayroll = (arr) => {
   return arr.reduce((accu, current) => {
     return accu + allWagesFor(current);
   }, 0);
+=======
+  return arr.reduce((accu, current) => {
+    accu.push(createEmployeeRecord(current));
+    return accu;
+  }, []);
+>>>>>>> 43b5e5ec47d208aa002d963b18edb6ba9a0412f6
 };
